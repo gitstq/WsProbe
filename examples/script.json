@@ -1,0 +1,33 @@
+{
+  "url": "ws://127.0.0.1:8765",
+  "steps": [
+    {
+      "action": "send",
+      "data": { "cmd": "subscribe", "channel": "ticker" }
+    },
+    {
+      "action": "expect",
+      "filter": "cmd == \"subscribe\"",
+      "timeout": 5
+    },
+    {
+      "action": "sleep",
+      "seconds": 0.5
+    },
+    {
+      "action": "send",
+      "data": "plain text also works"
+    },
+    {
+      "action": "wait",
+      "count": 1,
+      "timeout": 5
+    },
+    {
+      "action": "ping"
+    },
+    {
+      "action": "close"
+    }
+  ]
+}
