@@ -1,0 +1,9 @@
+# WsProbe 运行时依赖
+#
+# WsProbe 的核心设计目标是"零第三方依赖":
+# 全部协议逻辑(帧编解码、掩码、握手、心跳、关闭握手)均基于 Python 标准库实现。
+# 因此本文件为空是**预期行为**,不存在缺失依赖的问题。
+#
+# 运行所需:Python >= 3.8(仅标准库:socket / ssl / struct / hashlib / base64 / json / os)
+#
+# 开发(可选)依赖见 requirements-dev.txt
